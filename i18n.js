@@ -51,12 +51,12 @@ const U={
 /* search page */
 "Search profiles":"پروفائلز تلاش کریں","Filters":"فلٹرز","Gender":"جنس","All":"سب","Age min":"کم از کم عمر","Age max":"زیادہ سے زیادہ عمر",
 "Education":"تعلیم","Masters":"ماسٹرز","Alim / Alima":"عالم / عالمہ","Doctor":"ڈاکٹر",
-"Community (Biradari)":"برادری","e.g. Rajput, Arain":"جیسے راجپوت، آرائیں","City / Country":"شہر / ملک","e.g. Jhelum":"جیسے جہلم","Apply filters":"فلٹر لگائیں",
+"Country":"ملک","City":"شہر","e.g. Pakistan":"جیسے پاکستان","Second Marriage":"دوسری شادی","Community (Biradari)":"برادری","e.g. Rajput, Arain":"جیسے راجپوت، آرائیں","City / Country":"شہر / ملک","e.g. Jhelum":"جیسے جہلم","Apply filters":"فلٹر لگائیں",
 "Verified":"تصدیق شدہ","Unlock contact":"رابطہ ان لاک کریں","No profiles found. Try again with fewer filters.":"کوئی پروفائل نہیں ملی۔ فلٹرز کم کر کے دوبارہ کوشش کریں۔",
 /* sample profiles */
 "Ayesha R.":"عائشہ ر.","Hamza M.":"حمزہ م.","Sana K.":"ثناء ک.","Bilal A.":"بلال ا.","Maryam S.":"مریم س.",
-"Jhelum, PK":"جہلم، پاکستان","Lahore, PK":"لاہور، پاکستان","Manchester, UK":"مانچسٹر، برطانیہ","Dubai, UAE":"دبئی، یو اے ای","Karachi, PK":"کراچی، پاکستان",
-"Rajput":"راجپوت","Sheikh":"شیخ","Jutt":"جٹ","Syed":"سید","Alima":"عالمہ",
+
+"Rajput":"راجپوت","Chaudhry":"چوہدری","Usman T.":"عثمان ط.","Civil Engineer":"سول انجینئر","Sheikh":"شیخ","Jutt":"جٹ","Syed":"سید","Alima":"عالمہ",
 "Teacher":"ٹیچر","Software Engineer":"سافٹ ویئر انجینئر","Homemaker":"گھریلو خاتون","Businessman":"کاروباری","Engineer":"انجینئر",
 /* signup */
 "Create your profile":"اپنا پروفائل بنائیں","Personal":"ذاتی","Family":"خاندان","Verification":"تصدیق",
@@ -114,7 +114,7 @@ function applyLang(l){
 LANG=l==='ur'?'ur':'en';try{localStorage.setItem('mr-lang',LANG)}catch(e){}
 const d=document.documentElement;d.lang=LANG;d.dir=LANG==='ur'?'rtl':'ltr';
 const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
-while(n=w.nextNode()){const p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName)||p.closest('#res,#nx,.amt,#lgw'))continue;
+while(n=w.nextNode()){const p=n.parentNode;if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName)||p.closest('#res,#nx,.amt,#lgw,.acl'))continue;
 const raw=n.nodeValue,k=raw.trim();if(!k)continue;
 if(n.__o===undefined)n.__o=R[k]!==undefined?raw.replace(k,()=>R[k]):raw;
 const o=n.__o.trim();n.nodeValue=LANG==='ur'&&U[o]?n.__o.replace(o,()=>U[o]):n.__o}

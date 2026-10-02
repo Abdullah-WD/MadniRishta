@@ -157,3 +157,12 @@ html[dir=rtl] .rc span{margin-left:0!important;margin-right:auto}
 .thm button.on{color:var(--au2);background:rgba(201,162,75,.16);border-color:#efd995;box-shadow:0 0 6px 1px rgba(239,217,149,.85),0 0 18px 3px rgba(201,162,75,.55);text-shadow:0 0 8px rgba(239,217,149,.9)}
 }
 @media(max-width:400px){.brand{font-size:1.35rem;gap:8px}.brand img{width:42px;height:42px}}
+/* ===== COUNTRY / CITY SUGGESTIONS ===== */
+.ac{position:relative}.ac:focus-within{z-index:50}
+.acl{list-style:none;margin:6px 0 0;padding:6px;position:absolute;inset-inline:0;top:100%;z-index:40;max-height:262px;overflow-y:auto;background:var(--card);border:1px solid var(--au);border-radius:14px;box-shadow:0 18px 40px -14px rgba(6,34,24,.45);display:none}
+.acl.on{display:block;animation:acin .18s ease}
+@keyframes acin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.acl li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;cursor:pointer;font-size:.92rem;color:var(--tx);transition:background .15s}
+.acl li small{color:var(--mu);font-size:.74rem;white-space:nowrap}
+.acl li b{color:var(--g3);font-weight:800}
+.acl li:hover,.acl li.act{background:rgba(201,162,75,.18)}
