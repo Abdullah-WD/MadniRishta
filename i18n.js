@@ -51,7 +51,7 @@ const U={
 /* search page */
 "Search profiles":"پروفائلز تلاش کریں","Filters":"فلٹرز","Gender":"جنس","All":"سب","Age min":"کم از کم عمر","Age max":"زیادہ سے زیادہ عمر",
 "Education":"تعلیم","Masters":"ماسٹرز","Alim / Alima":"عالم / عالمہ","Doctor":"ڈاکٹر",
-"Country":"ملک","City":"شہر","e.g. Pakistan":"جیسے پاکستان","Second Marriage":"دوسری شادی","Community (Biradari)":"برادری","e.g. Rajput, Arain":"جیسے راجپوت، آرائیں","City / Country":"شہر / ملک","e.g. Jhelum":"جیسے جہلم","Apply filters":"فلٹر لگائیں",
+"Country":"ملک","City":"شہر","e.g. Pakistan":"جیسے پاکستان","Second Marriage":"دوسری شادی","Community (Biradari)":"برادری","e.g. Rajput, Arain":"جیسے راجپوت، آرائیں","e.g. Jhelum":"جیسے جہلم","Apply filters":"فلٹر لگائیں",
 "Verified":"تصدیق شدہ","Unlock contact":"رابطہ ان لاک کریں","No profiles found. Try again with fewer filters.":"کوئی پروفائل نہیں ملی۔ فلٹرز کم کر کے دوبارہ کوشش کریں۔",
 /* sample profiles */
 "Ayesha R.":"عائشہ ر.","Hamza M.":"حمزہ م.","Sana K.":"ثناء ک.","Bilal A.":"بلال ا.","Maryam S.":"مریم س.",
@@ -79,7 +79,7 @@ const U={
 "Select":"منتخب کریں","Most popular":"سب سے مقبول","Prices are indicative.":"قیمتیں نمونے کے طور پر ہیں۔","Stripe (international)":"Stripe (بین الاقوامی)",
 /* about */
 "About us":"ہمارے بارے میں","Alhamdulillah – I belong to Dawat-e-Islami":"الحمدللہ عزوجل – میرا تعلق دعوتِ اسلامی سے ہے",
-"(Madani Attari Rishtay) is a special platform that connects Sunni Hanfi Barelvi families with one another. This service is carried out with truthfulness, honesty and sincerity, to promote nikah according to the Sunnah. Alhamdulillah, for the past":"(مدنی عطاری رشتے) ایک خاص پلیٹ فارم ہے جو سنی حنفی بریلوی خاندانوں کو آپس میں جوڑتا ہے۔ یہ خدمت سچائی، ایمانداری اور خلوصِ نیت کے ساتھ، سنت کے مطابق نکاح کو عام کرنے کے لیے کی جا رہی ہے۔ الحمدللہ، گزشتہ",
+"is a special platform that connects Sunni Hanfi Barelvi families with one another. This service is carried out with truthfulness, honesty and sincerity, to promote nikah according to the Sunnah. Alhamdulillah, for the past":"ایک خاص پلیٹ فارم ہے جو سنی حنفی بریلوی خاندانوں کو آپس میں جوڑتا ہے۔ یہ خدمت سچائی، ایمانداری اور خلوصِ نیت کے ساتھ، سنت کے مطابق نکاح کو عام کرنے کے لیے کی جا رہی ہے۔ الحمدللہ، گزشتہ",
 "8 years":"8 سال","we have been engaged in arranging nikah.":"سے نکاح کروانے میں مصروفِ عمل ہیں۔",
 "May nikah become common and zina disappear. May the home of every sister and daughter be settled, but this is only possible with your cooperation – that is, reduce demands and perform nikah according to the Sunnah.":"نکاح عام ہو اور زنا ختم ہو۔ ہر بہن بیٹی کا گھر آباد ہو، لیکن یہ آپ لوگوں کے تعاون سے ہی ممکن ہے، یعنی مطالبات کم کریں اور نکاح کو سنت کے مطابق ادا کریں۔",
 "Our Principle":"ہمارا اصول",

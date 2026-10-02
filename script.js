@@ -27,27 +27,30 @@ if(!male&&o){if(fm.value==='Second Marriage')fm.value='';o.remove()}}
 $('#fg').onchange=maritalOpts;maritalOpts();
 /* country / city suggestions */
 const cFind=v=>{v=lc((v||'').trim());return v&&CT.find(([e,u])=>lc(e)===v||u===v)};
-const cityList=()=>{const c=cFind($('#fco').value);return c?(CI[c[0]]||[]).map(x=>[x[0],x[1],'']):Object.entries(CI).flatMap(([k,v])=>v.map(x=>[x[0],x[1],k]))};
+const cityList=co=>{const c=cFind(co.value);return c?(CI[c[0]]||[]).map(x=>[x[0],x[1],'']):Object.entries(CI).flatMap(([k,v])=>v.map(x=>[x[0],x[1],k]))};
 const esc=x=>x.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const hl=(l,q)=>{q=q.trim();const i=q?lc(l).indexOf(lc(q)):-1;return i<0?esc(l):esc(l.slice(0,i))+'<b>'+esc(l.slice(i,i+q.length))+'</b>'+esc(l.slice(i+q.length))};
 function suggest(items,q){q=lc(q.trim());if(!q)return items.slice(0,8);
 const sc=([e,u])=>{e=lc(e);return e.startsWith(q)||u.startsWith(q)?0:e.split(/\s+/).some(w=>w.startsWith(q))?1:e.includes(q)||u.includes(q)?2:-1};
 return items.map(it=>[it,sc(it)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]).slice(0,8).map(x=>x[0])}
-function ac(inp,ul,src,pick){let idx=-1,cur=[];
+function ac(inp,ul,src,pick,onEnter){let idx=-1,cur=[];
 const close=()=>{ul.classList.remove('on');idx=-1},mark=()=>[...ul.children].forEach((li,i)=>li.classList.toggle('act',i===idx));
 const render=q=>{cur=suggest(src(),q);idx=-1;ul.innerHTML=cur.map((it,i)=>`<li role="option" data-i="${i}"><span>${hl(nm(it[0]),q)}</span>${it[2]?`<small>${esc(nm(it[2]))}</small>`:''}</li>`).join('');ul.classList.toggle('on',cur.length>0)};
 const choose=i=>{pick(cur[i]);close()};
 inp.addEventListener('focus',()=>render(''));inp.addEventListener('input',()=>render(inp.value));
 inp.addEventListener('keydown',e=>{const open=ul.classList.contains('on');
 if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!open)render('');idx=(idx+(e.key==='ArrowDown'?1:-1)+cur.length)%cur.length;mark();ul.children[idx]&&ul.children[idx].scrollIntoView({block:'nearest'})}
-else if(e.key==='Enter'){if(open&&idx>=0){e.preventDefault();choose(idx)}else{close();show()}}
+else if(e.key==='Enter'){if(open&&idx>=0){e.preventDefault();choose(idx)}else{close();onEnter&&onEnter()}}
 else if(e.key==='Escape'||e.key==='Tab')close()});
 ul.addEventListener('click',e=>{const li=e.target.closest('li');if(li)choose(+li.dataset.i)});
 document.addEventListener('click',e=>{if(!inp.parentNode.contains(e.target))close()});
 return{close,refresh:()=>ul.classList.contains('on')&&render(inp.value)}}
-const acCo=ac($('#fco'),$('#lco'),()=>CT.map(x=>[x[0],x[1],'']),it=>{const c=$('#fco');c.value=nm(it[0]);const ci=$('#fc'),f=ci.value.trim();if(f&&!(CI[it[0]]||[]).some(x=>lc(x[0])===lc(f)||x[1]===f))ci.value=''});
-const acCi=ac($('#fc'),$('#lci'),cityList,it=>{$('#fc').value=nm(it[0]);if(it[2]&&!cFind($('#fco').value))$('#fco').value=nm(it[2])});
-function relabel(){[['#fco',()=>CT],['#fc',()=>cityList()]].forEach(([id,L])=>{const i=$(id),v=lc(i.value.trim());if(!v)return;const f=L().find(x=>lc(x[0])===v||x[1]===i.value.trim());if(f)i.value=nm(f[0])});acCo.refresh();acCi.refresh()}
+function placePair(co,ci,lco,lci,onEnter){co=$(co);ci=$(ci);const cl=()=>cityList(co);
+const a=ac(co,$(lco),()=>CT.map(x=>[x[0],x[1],'']),it=>{co.value=nm(it[0]);const f=ci.value.trim();if(f&&!(CI[it[0]]||[]).some(x=>lc(x[0])===lc(f)||x[1]===f))ci.value=''},onEnter);
+const b=ac(ci,$(lci),cl,it=>{ci.value=nm(it[0]);if(it[2]&&!cFind(co.value))co.value=nm(it[2])},onEnter);
+return()=>{[[co,()=>CT],[ci,cl]].forEach(([i,L])=>{const v=lc(i.value.trim());if(!v)return;const f=L().find(x=>lc(x[0])===v||x[1]===i.value.trim());if(f)i.value=nm(f[0])});a.refresh();b.refresh()}}
+const placeFns=[placePair('#fco','#fc','#lco','#lci',show),placePair('#sco','#sci','#sl-co','#sl-ci')];
+function relabel(){placeFns.forEach(f=>f())}
 $('#go').onclick=show;show();
 let s=0,done=false;const fs=$$('.fs'),tb=$$('.tabs span');
 function step(){fs.forEach((f,i)=>f.classList.toggle('on',i===s));tb.forEach((t,i)=>t.classList.toggle('on',i<=s));$('#bk').style.visibility=s?'visible':'hidden';$('#nx').textContent=done?t('Submitted: Pending Approval'):(s===3?t('Submit'):t('Next'))}
