@@ -30,7 +30,7 @@ const U={
 "Graduate":"گریجویٹ","Arain":"آرائیں",
 "Local and international payment":"مقامی اور بین الاقوامی ادائیگی","In PKR or USD, whichever suits you.":"پی کے آر یا یو ایس ڈی میں، اپنی سہولت کے مطابق۔",
 /* mission */
-"Alhamdulillah – Our Madani Attari Online Rishtay":"الحمدللہ عزوجل – ہمارا مدنی عطاری آن لائن رشتے",
+"Alhamdulillah – Our Madani Rishta":"الحمدللہ عزوجل – ہمارا مدنی رشتہ",
 "Our Mission":"ہماری کوشش",
 "To arrange nikah only among people of sound belief (sahih-ul-aqeedah), and to establish purity, love and peace in society.":"صرف صحیح العقیدہ لوگوں کے درمیان نکاح کروا کر معاشرے میں پاکیزگی، محبت اور سکون کا قیام۔",
 "Let nikah become common and zina disappear":"نکاح عام ہو، زنا ختم ہو",
