@@ -1,8 +1,8 @@
-/* Madni Rishta – English (default) / Urdu translation */
+/* Madani Rishta – English (default) / Urdu translation */
 const U={
 /* nav & common */
 "Home":"ہوم","Search":"تلاش","Packages":"پیکجز","About":"ہمارے بارے میں","Policies":"پالیسیاں","Contact":"رابطہ","Register":"رجسٹر کریں","Register now":"ابھی رجسٹر کریں",
-"Menu":"مینو","Theme":"تھیم","Theme:":"تھیم:","Light":"لائٹ","Dark":"ڈارک","Translation":"ترجمہ","Madni Rishta":"مدنی رشتہ","WhatsApp":"واٹس ایپ","Contact us on WhatsApp":"واٹس ایپ پر رابطہ کریں",
+"Menu":"مینو","Theme":"تھیم","Theme:":"تھیم:","Light":"لائٹ","Dark":"ڈارک","Translation":"ترجمہ","Madani Rishta":"مدنی رشتہ","WhatsApp":"واٹس ایپ","Contact us on WhatsApp":"واٹس ایپ پر رابطہ کریں",
 /* hero */
 "✦ Exclusively for Sunni Hanfi Barelvi families":"✦ صرف سنی حنفی بریلوی خاندانوں کے لیے",
 "Arranging nikah for the past 8 years":"گزشتہ 8 سالوں سے نکاح کروانے میں مصروف",
@@ -30,7 +30,7 @@ const U={
 "Graduate":"گریجویٹ","Arain":"آرائیں",
 "Local and international payment":"مقامی اور بین الاقوامی ادائیگی","In PKR or USD, whichever suits you.":"پی کے آر یا یو ایس ڈی میں، اپنی سہولت کے مطابق۔",
 /* mission */
-"Alhamdulillah – Our Madni Attari Online Rishtay":"الحمدللہ عزوجل – ہمارا مدنی عطاری آن لائن رشتے",
+"Alhamdulillah – Our Madani Attari Online Rishtay":"الحمدللہ عزوجل – ہمارا مدنی عطاری آن لائن رشتے",
 "Our Mission":"ہماری کوشش",
 "To arrange nikah only among people of sound belief (sahih-ul-aqeedah), and to establish purity, love and peace in society.":"صرف صحیح العقیدہ لوگوں کے درمیان نکاح کروا کر معاشرے میں پاکیزگی، محبت اور سکون کا قیام۔",
 "Let nikah become common and zina disappear":"نکاح عام ہو، زنا ختم ہو",
@@ -79,7 +79,7 @@ const U={
 "Select":"منتخب کریں","Most popular":"سب سے مقبول","Prices are indicative.":"قیمتیں نمونے کے طور پر ہیں۔","Stripe (international)":"Stripe (بین الاقوامی)",
 /* about */
 "About us":"ہمارے بارے میں","Alhamdulillah – I belong to Dawat-e-Islami":"الحمدللہ عزوجل – میرا تعلق دعوتِ اسلامی سے ہے",
-"(Madni Attari Rishtay) is a special platform that connects Sunni Hanfi Barelvi families with one another. This service is carried out with truthfulness, honesty and sincerity, to promote nikah according to the Sunnah. Alhamdulillah, for the past":"(مدنی عطاری رشتے) ایک خاص پلیٹ فارم ہے جو سنی حنفی بریلوی خاندانوں کو آپس میں جوڑتا ہے۔ یہ خدمت سچائی، ایمانداری اور خلوصِ نیت کے ساتھ، سنت کے مطابق نکاح کو عام کرنے کے لیے کی جا رہی ہے۔ الحمدللہ، گزشتہ",
+"(Madani Attari Rishtay) is a special platform that connects Sunni Hanfi Barelvi families with one another. This service is carried out with truthfulness, honesty and sincerity, to promote nikah according to the Sunnah. Alhamdulillah, for the past":"(مدنی عطاری رشتے) ایک خاص پلیٹ فارم ہے جو سنی حنفی بریلوی خاندانوں کو آپس میں جوڑتا ہے۔ یہ خدمت سچائی، ایمانداری اور خلوصِ نیت کے ساتھ، سنت کے مطابق نکاح کو عام کرنے کے لیے کی جا رہی ہے۔ الحمدللہ، گزشتہ",
 "8 years":"8 سال","we have been engaged in arranging nikah.":"سے نکاح کروانے میں مصروفِ عمل ہیں۔",
 "May nikah become common and zina disappear. May the home of every sister and daughter be settled, but this is only possible with your cooperation – that is, reduce demands and perform nikah according to the Sunnah.":"نکاح عام ہو اور زنا ختم ہو۔ ہر بہن بیٹی کا گھر آباد ہو، لیکن یہ آپ لوگوں کے تعاون سے ہی ممکن ہے، یعنی مطالبات کم کریں اور نکاح کو سنت کے مطابق ادا کریں۔",
 "Our Principle":"ہمارا اصول",
@@ -102,10 +102,10 @@ const U={
 /* contact & footer */
 "Direct contact":"براہِ راست رابطہ","Call":"کال کریں","Name":"نام","Message":"پیغام","Send":"بھیجیں",
 "A secure matrimonial portal for Sunni Hanfi Barelvi families.":"سنی حنفی بریلوی خاندانوں کے لیے محفوظ رشتہ پورٹل۔","Links":"لنکس",
-"© 2026 Madni Rishta · madanirishta.com":"© 2026 مدنی رشتہ · madanirishta.com"
+"© 2026 Madani Rishta · madanirishta.com":"© 2026 مدنی رشتہ · madanirishta.com"
 };
-const WA={en:"Assalamu Alaikum, I would like to know more about Madni Rishta.",ur:"السلام علیکم، مجھے مدنی رشتہ کے بارے میں معلومات چاہییں۔"};
-const META={en:{t:"Madni Rishta – Sunni Hanfi Barelvi Matrimonial",d:"Madni Attari Rishtay – a sincere, Sunnah-based nikah effort for Sunni Hanfi Barelvi families connected with Dawat-e-Islami. Contact: 0313-7455454."},
+const WA={en:"Assalamu Alaikum, I would like to know more about Madani Rishta.",ur:"السلام علیکم، مجھے مدنی رشتہ کے بارے میں معلومات چاہییں۔"};
+const META={en:{t:"Madani Rishta – Sunni Hanfi Barelvi Matrimonial",d:"Madani Attari Rishtay – a sincere, Sunnah-based nikah effort for Sunni Hanfi Barelvi families connected with Dawat-e-Islami. Contact: 0313-7455454."},
 ur:{t:"مدنی رشتہ – سنی حنفی بریلوی رشتہ پورٹل",d:"مدنی عطاری رشتے – دعوتِ اسلامی سے وابستہ سنی حنفی بریلوی خاندانوں کے لیے نیک، سنت کے مطابق نکاح کی کوشش۔ رابطہ: 0313-7455454۔"}};
 const R={};for(const k in U)R[U[k]]=k;
 let LANG='en';try{if(localStorage.getItem('mr-lang')==='ur')LANG='ur'}catch(e){}
