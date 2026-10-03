@@ -1,6 +1,7 @@
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-function route(){const h=(location.hash||'#home').slice(1);const id=document.getElementById(h)&&$('#'+h).classList.contains('pg')?h:'home';
-$$('.pg').forEach(p=>p.classList.toggle('on',p.id===id));$$('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));$('#nv').classList.remove('open');scrollTo(0,0)}
+function route(){const raw=(location.hash||'#home').slice(1),[h,arg]=raw.split('/');const id=document.getElementById(h)&&$('#'+h).classList.contains('pg')?h:'home';
+if(window.routeGuard){const g=routeGuard(id,arg);if(g){location.replace(g);return}}
+$$('.pg').forEach(p=>p.classList.toggle('on',p.id===id));$$('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));$('#nv').classList.remove('open');scrollTo(0,0);window.onRoute&&onRoute(id,arg)}
 addEventListener('hashchange',route);route();
 $('#mb').onclick=()=>$('#nv').classList.toggle('open');
 document.addEventListener('click',e=>{const nv=$('#nv');if(nv.classList.contains('open')&&!nv.contains(e.target)&&!$('#mb').contains(e.target))nv.classList.remove('open')});
@@ -18,7 +19,7 @@ const nm=en=>LANG==='ur'&&PL[en]?PL[en]:en,lc=x=>x.toLowerCase(),sep=()=>LANG===
 const has=(v,en)=>{v=lc(v.trim());return !v||lc(en).includes(v)||(PL[en]||'').includes(v)};
 function show(){const g=$('#fg').value,m=$('#fm').value,e=$('#fe').value.toLowerCase(),b=$('#fb').value.toLowerCase(),co=$('#fco').value,ci=$('#fc').value,a=+$('#a1').value||0,z=+$('#a2').value||99;
 const r=P.filter(p=>(!g||p[1]===g)&&(!m||p[3]===m)&&p[2]>=a&&p[2]<=z&&(!e||p[4].toLowerCase().includes(e.split(' ')[0]))&&(!b||p[5].toLowerCase().includes(b))&&has(co,p[7])&&has(ci,p[6]));
-$('#res').innerHTML=r.length?r.map(p=>`<div class="card prof"><div class="av">${t(p[0])[0]}</div><div style="flex:1"><h3 style="margin:0">${t(p[0])}, ${p[2]}<span class="vb">✔ ${t("Verified")}</span></h3><span class="tag">${t(p[3])}</span><span class="tag">${t(p[4])}</span><span class="tag">${t(p[5])}</span><span class="tag">${nm(p[6])}${sep()}${nm(p[7])}</span><div class="lock">${p[8]} · ${t(p[9])}</div></div><a class="btn sm" href="#plans">${t("Unlock contact")}</a></div>`).join(''):`<div class="card">${t('No profiles found. Try again with fewer filters.')}</div>`}
+$('#res').innerHTML=r.length?r.map(p=>`<div class="card prof"><div class="av">${t(p[0])[0]}</div><div style="flex:1"><h3 style="margin:0">${t(p[0])}, ${p[2]}<span class="vb">✔ ${t("Verified")}</span></h3><span class="tag">${t(p[3])}</span><span class="tag">${t(p[4])}</span><span class="tag">${t(p[5])}</span><span class="tag">${nm(p[6])}${sep()}${nm(p[7])}</span><div class="lock">${p[8]} · ${t(p[9])}</div></div><a class="btn sm" href="#profile/${p[8]}">${t("View profile")}</a></div>`).join(''):`<div class="card">${t('No profiles found. Try again with fewer filters.')}</div>`}
 /* "Second Marriage" is offered in Marital status only when Gender = Male */
 const fm=$('#fm');
 function maritalOpts(){const male=$('#fg').value==='Male',o=fm.querySelector('[value="Second Marriage"]');
@@ -54,8 +55,9 @@ function relabel(){placeFns.forEach(f=>f())}
 $('#go').onclick=show;show();
 let s=0,done=false;const fs=$$('.fs'),tb=$$('.tabs span');
 function step(){fs.forEach((f,i)=>f.classList.toggle('on',i===s));tb.forEach((t,i)=>t.classList.toggle('on',i<=s));$('#bk').style.visibility=s?'visible':'hidden';$('#nx').textContent=done?t('Submitted: Pending Approval'):(s===3?t('Submit'):t('Next'))}
-$('#nx').onclick=()=>{if(s<3){s++;step()}else{done=true;$('#nx').disabled=true;step()}};$('#bk').onclick=()=>{s--;step()};step();
-function cur(c){$$('[data-p]').forEach(e=>{const[k,u]=e.dataset.p.split('|');e.textContent=c==='PKR'?'Rs '+(+k).toLocaleString():'$'+u});$$('.tg button').forEach(b=>b.classList.toggle('on',b.dataset.c===c))}
+$('#nx').onclick=()=>{if(s<3){s++;step()}else{if(window.submitReg&&!submitReg())return;s=0;done=false;$('#nx').disabled=false;window.resetSignup&&resetSignup();step()}};$('#bk').onclick=()=>{s--;step()};step();
+let curC='PKR';
+function cur(c){curC=c;$$('[data-p]').forEach(e=>{const[k,u]=e.dataset.p.split('|');e.textContent=c==='PKR'?'Rs '+(+k).toLocaleString():'$'+u});$$('.tg button').forEach(b=>b.classList.toggle('on',b.dataset.c===c))}
 $$('.tg button').forEach(b=>b.onclick=()=>cur(b.dataset.c));cur('PKR');
 
 /* ===== PREMIUM EFFECTS ===== */
