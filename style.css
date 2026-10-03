@@ -41,8 +41,6 @@ nav .btn{margin-left:8px}
 @media(prefers-reduced-motion:no-preference){.seal{animation:fl 7s ease-in-out infinite}.fc.a{animation:fl 6s ease-in-out infinite}.fc.b{animation:fl 8s ease-in-out infinite reverse}.hero .ht{animation:rise .9s both}@keyframes rise{from{opacity:0;transform:translateY(26px)}}}
 @media(prefers-reduced-motion:reduce){.ring{animation:none}}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr;text-align:center;padding:50px 22px 90px}.hero p{margin:auto}.hero .btns,.trust{justify-content:center}.sw{order:-1;min-height:300px}.seal{width:200px}.ring{width:270px}.fc{display:none}}
-.qs{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:14px;align-items:end;margin-top:-58px;position:relative;z-index:5;box-shadow:var(--sh)}
-@media(max-width:900px){.qs{grid-template-columns:1fr 1fr;margin-top:-50px}.qs .btn{grid-column:1/-1;text-align:center}}
 section.s{padding:92px 0}section.s h2{position:relative;padding-bottom:18px}section.s h2.c:after{content:"❖";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);color:var(--au);font-size:1rem;letter-spacing:8px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:28px;transition:.3s}
@@ -88,7 +86,7 @@ header{transition:.3s}header.sc{background:rgba(6,34,24,.94);box-shadow:0 10px 3
 @keyframes shine{to{background-position:-250% 0}}
 .mand{position:absolute;width:min(640px,150%);aspect-ratio:1;opacity:.55;z-index:0}.mand g{transform-origin:300px 300px;animation:spin 90s linear infinite}.mand g:nth-child(2){animation-duration:140s;animation-direction:reverse}
 .fc{translate:calc(var(--px,0)*22px) calc(var(--py,0)*22px);transition:translate .4s}
-.mq{overflow:hidden;background:var(--g2);border-block:1px solid var(--au);margin-top:70px;padding:16px 0;color:var(--au2);font:1.5rem Amiri,serif;white-space:nowrap}
+.mq{overflow:hidden;background:var(--g2);border-block:1px solid var(--au);margin-top:0;padding:16px 0;color:var(--au2);font:1.5rem Amiri,serif;white-space:nowrap}
 .tk{display:inline-flex;gap:46px;animation:mq 38s linear infinite;padding-left:46px}@keyframes mq{to{transform:translateX(-50%)}}.mq:hover .tk{animation-play-state:paused}
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:20px}.bt{grid-column:span 2;background:var(--card);border:1px solid var(--bd);border-radius:26px;padding:32px;position:relative;overflow:hidden;transition:.35s}
 .bt:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:var(--au)}.bt.w4{grid-column:span 4}
@@ -166,3 +164,17 @@ html[dir=rtl] .rc span{margin-left:0!important;margin-right:auto}
 .acl li small{color:var(--mu);font-size:.74rem;white-space:nowrap}
 .acl li b{color:var(--g3);font-weight:800}
 .acl li:hover,.acl li.act{background:rgba(201,162,75,.18)}
+/* ===== HOME: "I am looking for rishta" BAR ===== */
+.qs2{position:relative;z-index:5;margin:-34px auto 34px;max-width:860px;display:flex;align-items:center;gap:18px;padding:12px 12px 12px 14px;background:var(--card);border:1px solid var(--au);border-radius:70px;box-shadow:0 22px 50px -18px rgba(6,34,24,.5),0 0 0 6px rgba(201,162,75,.14);transition:box-shadow .3s,transform .3s}
+.qs2:hover{transform:translateY(-2px);box-shadow:0 26px 56px -18px rgba(6,34,24,.55),0 0 0 8px rgba(201,162,75,.22)}
+.qi{flex:none;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--g3),var(--g2));color:var(--au2);box-shadow:0 0 0 3px var(--card),0 0 0 4px var(--au)}
+.qi svg{width:26px;height:26px;animation:qbeat 2.4s ease-in-out infinite}
+@keyframes qbeat{0%,60%,100%{transform:scale(1)}30%{transform:scale(1.18)}}
+.qt{flex:1;min-width:0;font:700 1.75rem/1.2 Amiri,serif;color:var(--tx)}
+.qb{flex:none;display:inline-flex;align-items:center;gap:10px;padding:16px 32px;font-size:1rem}
+.qb svg{width:18px;height:18px;transition:transform .25s}
+.qb:hover svg{transform:translateX(4px)}
+html[dir=rtl] .qb svg{transform:scaleX(-1)}html[dir=rtl] .qb:hover svg{transform:scaleX(-1) translateX(4px)}
+html[dir=rtl] .qs2{padding:12px 14px 12px 12px}
+@media(max-width:640px){.qs2{margin:-28px 14px 28px;gap:12px;padding:10px;border-radius:44px}.qi{width:44px;height:44px}.qi svg{width:22px;height:22px}.qt{font-size:1.15rem}.qb{padding:13px 20px;font-size:.92rem}.qb svg{display:none}}
+@media(prefers-reduced-motion:reduce){.qi svg{animation:none}.qs2,.qs2:hover{transition:none;transform:none}}

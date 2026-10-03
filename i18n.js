@@ -8,11 +8,11 @@ const U={
 "Arranging nikah for the past 8 years":"گزشتہ 8 سالوں سے نکاح کروانے میں مصروف",
 "A pious and trustworthy match, built on faith":"نیک اور بھروسے مند رشتہ، دین کی بنیاد پر",
 "Every profile goes live only after admin approval. A clean, respectful and safe way to find your life partner.":"ہر پروفائل ایڈمن کی منظوری کے بعد ہی لائیو ہوتی ہے۔ اپنا ہمسفر ڈھونڈنے کا صاف، عزت والا اور محفوظ طریقہ۔",
-"Create a free account":"مفت اکاؤنٹ بنائیں","Browse profiles":"پروفائلز دیکھیں","Contact on WhatsApp":"واٹس ایپ پر رابطہ",
+"Create a free account":"مفت اکاؤنٹ بنائیں","I am looking for rishta":"میں رشتہ تلاش کر رہا/رہی ہوں","Contact on WhatsApp":"واٹس ایپ پر رابطہ",
 "Registered profiles":"رجسٹرڈ پروفائلز","Admin approved":"ایڈمن سے منظور شدہ","Secure contact":"محفوظ رابطہ",
 "Verified profile":"تصدیق شدہ پروفائل","Contact locked":"رابطہ لاک ہے","Paid members only":"صرف پیڈ ممبرز کے لیے",
 /* quick search */
-"I am":"میں ہوں","Male":"مرد","Female":"خاتون","Age (from)":"عمر (سے)","Age (to)":"عمر (تک)","Marital status":"ازدواجی حیثیت",
+"Male":"مرد","Female":"خاتون","Marital status":"ازدواجی حیثیت",
 "Single":"غیر شادی شدہ","Divorced":"طلاق یافتہ","Widow":"بیوہ","Khula":"خلع یافتہ","Married":"شادی شدہ",
 /* ticker */
 "Sunni Hanfi Barelvi":"سنی حنفی بریلوی","Admin Approved":"ایڈمن سے منظور شدہ","Secure Contact":"محفوظ رابطہ",
